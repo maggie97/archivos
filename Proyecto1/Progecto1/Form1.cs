@@ -17,16 +17,15 @@ namespace Progecto1
         public Form1()
         {
             ediciones =  new List<Editor>();
+            tabCtrl = null;
             InitializeComponent();
             
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(tabCtrl != null)
             try
-            {
-            }
-            catch
             {
                 tabCtrl = new TabControl();
                 TabPage tabEntidades = new TabPage("Entidades");
@@ -43,9 +42,13 @@ namespace Progecto1
                 tabCtrl.Location = new Point(0, 24);
                 tabCtrl.Name = "Editor" + ediciones.Count;
                 tabCtrl.SelectedIndex = 0;
-                tabCtrl.Size = new Size(ClientSize.Width, ClientSize.Height );
-                
+                tabCtrl.Size = new Size(ClientSize.Width, ClientSize.Height);
+
                 Controls.Add(tabCtrl);
+            }
+            catch
+            {
+                
             }
             
         }
