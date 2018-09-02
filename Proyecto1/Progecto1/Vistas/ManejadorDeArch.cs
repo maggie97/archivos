@@ -4,56 +4,43 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
+using System.IO;
 using System.Windows.Forms;
+
 
 namespace Proyecto1
 {
     public partial class ManejadorArch : Form
     {
-        TabControl tabCtrl;
+        ArchivoCompleto V_Atributo;
+        List<Object> elementos;
         public ManejadorArch()
         {
-            tabCtrl = null;
             InitializeComponent();
-            
+            elementos = new List<Object>();
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(tabCtrl == null)
-            try
-            {
-                tabCtrl = new TabControl();
-                TabPage tabEntidades = new TabPage("Entidades");
-                TabPage tabAtributos = new TabPage("Atributos");
-                TabPage tabArchivoV = new TabPage("Archivo Rec");
-                TabPage tabArchivoT = new TabPage("Archivo Texto");
-                tabEntidades.BackColor = tabAtributos.BackColor =
-                    tabArchivoV.BackColor = tabArchivoT.BackColor = Color.White;
-                tabCtrl.Alignment = TabAlignment.Left;
-                tabCtrl.Controls.Add(tabEntidades);
-                tabCtrl.Controls.Add(tabAtributos);
-                tabCtrl.Controls.Add(tabArchivoV);
-                tabCtrl.Controls.Add(tabArchivoT);
-                tabCtrl.Location = new Point(0, 24);
-                tabCtrl.SelectedIndex = 0;
-                tabCtrl.Size = new Size(ClientSize.Width, ClientSize.Height);
-
-                Controls.Add(tabCtrl);
-            }
-            catch
-            {
-                
-            }
             
         }
-        void vistAtributos(TabPage atrib)
+
+        private void ManejadorArch_Load(object sender, EventArgs e)
         {
-            Atributo_Vista frmAtrbutos = new Atributo_Vista();
-            atrib.Controls.Add(frmAtrbutos);
 
+        }
+        private void btn_nuevo_Click(object sender, EventArgs e)
+        {
+            elementos = new List<object>();
+            V_Atributo = new ArchivoCompleto();
+            V_Atributo.TopLevel = false;
+        }
 
+        private void btn_ArchivoComp_Click(object sender, EventArgs e)
+        {
+            V_Atributo.Visible = true;
+            V_Atributo.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(V_Atributo);
         }
     }
 }

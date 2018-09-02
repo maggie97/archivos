@@ -1,6 +1,6 @@
 ﻿namespace Proyecto1
 {
-    partial class Atributo_Vista
+    partial class ArchivoCompleto
     {
         /// <summary>
         /// Required designer variable.
@@ -49,12 +49,12 @@
             this.clm_TipoIndice,
             this.clm_DirIndice,
             this.clm_SigAtrib});
-            this.listView1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.listView1.Cursor = System.Windows.Forms.Cursors.Help;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(807, 413);
+            this.listView1.Size = new System.Drawing.Size(776, 413);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -100,24 +100,23 @@
             this.clm_SigAtrib.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.clm_SigAtrib.Width = 145;
             // 
-            // Editor
+            // Atributo_Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 437);
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ClientSize = new System.Drawing.Size(800, 437);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Editor";
+            this.Name = "Atributo_Vista";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Editor";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Editor_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader clm_Nombre;
         private System.Windows.Forms.ColumnHeader clm_Dir;
         private System.Windows.Forms.ColumnHeader clm_Tipo;
@@ -125,5 +124,6 @@
         private System.Windows.Forms.ColumnHeader clm_TipoIndice;
         private System.Windows.Forms.ColumnHeader clm_DirIndice;
         private System.Windows.Forms.ColumnHeader clm_SigAtrib;
+        private System.Windows.Forms.ListView listView1;
     }
 }

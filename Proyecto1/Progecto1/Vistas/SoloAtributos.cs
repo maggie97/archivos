@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 namespace Proyecto1
 {
-    public partial class Atributo_Vista
-        : Form
+    public partial class SoloAtributos : Form
     {
         
         /// <summary>
@@ -20,18 +19,19 @@ namespace Proyecto1
         /// </summary>
         /// <param name="Nombre">Nombre del proyecto</param>
         /// <param name="n"> Número de pestaña </param>
-        public Atributo_Vista(string Nombre, int n)
+        public SoloAtributos(string Nombre, int n)
         {
             InitializeComponent();
         }
-        public Atributo_Vista()
+        public SoloAtributos()
         {
             InitializeComponent();
+            
         }
-
+        
         private void Editor_Load(object sender, EventArgs e)
         {
-            
+            listView1.Size = new Size(new Point(ClientSize.Width - 22, ClientSize.Height - 22));
         }
     }
 }

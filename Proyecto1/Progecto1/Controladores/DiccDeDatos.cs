@@ -8,5 +8,7 @@ namespace Proyecto1
 {
     class DiccDeDatos
     {
+        List<Object> elementos;
+
     }
 }
