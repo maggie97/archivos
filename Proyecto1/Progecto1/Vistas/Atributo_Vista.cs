@@ -8,9 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Progecto1
+namespace Proyecto1
 {
-    public partial class Editor : Form
+    public partial class Atributo_Vista
+        : Form
     {
         
         /// <summary>
@@ -19,10 +20,12 @@ namespace Progecto1
         /// </summary>
         /// <param name="Nombre">Nombre del proyecto</param>
         /// <param name="n"> Número de pestaña </param>
-        public Editor(string Nombre, int n)
+        public Atributo_Vista(string Nombre, int n)
         {
-            
-
+            InitializeComponent();
+        }
+        public Atributo_Vista()
+        {
             InitializeComponent();
         }
 

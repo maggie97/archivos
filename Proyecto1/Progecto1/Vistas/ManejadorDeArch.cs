@@ -5,18 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Progecto1
+namespace Proyecto1
 {
-    public partial class Form1 : Form
+    public partial class ManejadorArch : Form
     {
-        List<Editor> ediciones;
         TabControl tabCtrl;
-        public Form1()
+        public ManejadorArch()
         {
-            ediciones =  new List<Editor>();
             tabCtrl = null;
             InitializeComponent();
             
@@ -24,7 +21,7 @@ namespace Progecto1
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(tabCtrl != null)
+            if(tabCtrl == null)
             try
             {
                 tabCtrl = new TabControl();
@@ -40,7 +37,6 @@ namespace Progecto1
                 tabCtrl.Controls.Add(tabArchivoV);
                 tabCtrl.Controls.Add(tabArchivoT);
                 tabCtrl.Location = new Point(0, 24);
-                tabCtrl.Name = "Editor" + ediciones.Count;
                 tabCtrl.SelectedIndex = 0;
                 tabCtrl.Size = new Size(ClientSize.Width, ClientSize.Height);
 
@@ -51,6 +47,13 @@ namespace Progecto1
                 
             }
             
+        }
+        void vistAtributos(TabPage atrib)
+        {
+            Atributo_Vista frmAtrbutos = new Atributo_Vista();
+            atrib.Controls.Add(frmAtrbutos);
+
+
         }
     }
 }

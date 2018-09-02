@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Progecto1
+namespace Proyecto1
 {
     class Atributo
     {
+        string Nombre;
+        long dirAtributo;
+        int tipo;
+        int longitud;
+        int tipoIndice;
+
     }
 }
