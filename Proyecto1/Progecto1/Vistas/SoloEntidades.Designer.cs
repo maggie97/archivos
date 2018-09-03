@@ -45,7 +45,7 @@
             this.clm_DirAtr,
             this.clm_Dirl,
             this.clm_SigAtrib});
-            this.listView1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.listView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;

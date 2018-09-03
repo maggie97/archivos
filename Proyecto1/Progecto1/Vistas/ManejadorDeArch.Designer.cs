@@ -43,6 +43,8 @@
             this.btn_nvaEntidad = new System.Windows.Forms.Button();
             this.btn_nvoAtributo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Atributos = new System.Windows.Forms.Button();
+            this.btn_Entidades = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -128,12 +130,15 @@
             // 
             this.splitContainer1.Panel1.AllowDrop = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Teal;
+            this.splitContainer1.Panel1.Controls.Add(this.btn_Entidades);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_Atributos);
             this.splitContainer1.Panel1.Controls.Add(this.btn_nuevo);
             this.splitContainer1.Panel1.Controls.Add(this.btn_ArchivoComp);
             this.splitContainer1.Panel1.Controls.Add(this.btn_nvaEntidad);
             this.splitContainer1.Panel1.Controls.Add(this.btn_nvoAtributo);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.ForeColor = System.Drawing.Color.Black;
+            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Size = new System.Drawing.Size(961, 469);
             this.splitContainer1.SplitterDistance = 182;
             this.splitContainer1.TabIndex = 2;
@@ -142,7 +147,7 @@
             // 
             this.btn_nuevo.BackColor = System.Drawing.Color.LightBlue;
             this.btn_nuevo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nuevo.Location = new System.Drawing.Point(5, 24);
+            this.btn_nuevo.Location = new System.Drawing.Point(5, 16);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(172, 50);
             this.btn_nuevo.TabIndex = 8;
@@ -154,7 +159,7 @@
             // 
             this.btn_ArchivoComp.BackColor = System.Drawing.Color.LightBlue;
             this.btn_ArchivoComp.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ArchivoComp.Location = new System.Drawing.Point(5, 80);
+            this.btn_ArchivoComp.Location = new System.Drawing.Point(5, 184);
             this.btn_ArchivoComp.Name = "btn_ArchivoComp";
             this.btn_ArchivoComp.Size = new System.Drawing.Size(172, 50);
             this.btn_ArchivoComp.TabIndex = 7;
@@ -166,7 +171,7 @@
             // 
             this.btn_nvaEntidad.BackColor = System.Drawing.Color.LightBlue;
             this.btn_nvaEntidad.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nvaEntidad.Location = new System.Drawing.Point(5, 188);
+            this.btn_nvaEntidad.Location = new System.Drawing.Point(5, 128);
             this.btn_nvaEntidad.Name = "btn_nvaEntidad";
             this.btn_nvaEntidad.Size = new System.Drawing.Size(172, 50);
             this.btn_nvaEntidad.TabIndex = 6;
@@ -177,7 +182,7 @@
             // 
             this.btn_nvoAtributo.BackColor = System.Drawing.Color.LightBlue;
             this.btn_nvoAtributo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nvoAtributo.Location = new System.Drawing.Point(5, 134);
+            this.btn_nvoAtributo.Location = new System.Drawing.Point(5, 72);
             this.btn_nvoAtributo.Name = "btn_nvoAtributo";
             this.btn_nvoAtributo.Size = new System.Drawing.Size(172, 50);
             this.btn_nvoAtributo.TabIndex = 5;
@@ -187,10 +192,34 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 50);
+            this.label1.Location = new System.Drawing.Point(6, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 0;
+            // 
+            // btn_Atributos
+            // 
+            this.btn_Atributos.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_Atributos.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Atributos.Location = new System.Drawing.Point(5, 240);
+            this.btn_Atributos.Name = "btn_Atributos";
+            this.btn_Atributos.Size = new System.Drawing.Size(172, 50);
+            this.btn_Atributos.TabIndex = 9;
+            this.btn_Atributos.Text = "Atributos";
+            this.btn_Atributos.UseVisualStyleBackColor = false;
+            this.btn_Atributos.Click += new System.EventHandler(this.btn_Atributos_Click);
+            // 
+            // btn_Entidades
+            // 
+            this.btn_Entidades.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_Entidades.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Entidades.Location = new System.Drawing.Point(5, 296);
+            this.btn_Entidades.Name = "btn_Entidades";
+            this.btn_Entidades.Size = new System.Drawing.Size(172, 50);
+            this.btn_Entidades.TabIndex = 10;
+            this.btn_Entidades.Text = "Entidades";
+            this.btn_Entidades.UseVisualStyleBackColor = false;
+            this.btn_Entidades.Click += new System.EventHandler(this.btn_Entidades_Click);
             // 
             // ManejadorArch
             // 
@@ -236,6 +265,8 @@
         private System.Windows.Forms.Button btn_ArchivoComp;
         private System.Windows.Forms.Button btn_nvaEntidad;
         private System.Windows.Forms.Button btn_nvoAtributo;
+        private System.Windows.Forms.Button btn_Entidades;
+        private System.Windows.Forms.Button btn_Atributos;
     }
 }
 

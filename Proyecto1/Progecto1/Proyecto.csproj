@@ -47,6 +47,12 @@
   <ItemGroup>
     <Compile Include="Controladores\Atributo.cs" />
     <Compile Include="Controladores\DiccDeDatos.cs" />
+    <Compile Include="NuevoAtributo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoAtributo.Designer.cs">
+      <DependentUpon>NuevoAtributo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\SoloEntidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="NuevoAtributo.resx">
+      <DependentUpon>NuevoAtributo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\SoloEntidades.resx">
       <DependentUpon>SoloEntidades.cs</DependentUpon>
     </EmbeddedResource>

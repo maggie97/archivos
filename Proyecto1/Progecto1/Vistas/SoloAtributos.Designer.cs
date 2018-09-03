@@ -49,12 +49,12 @@
             this.clm_TipoIndice,
             this.clm_DirIndice,
             this.clm_SigAtrib});
-            this.listView1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.listView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(10, 10);
-            this.listView1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.listView1.Margin = new System.Windows.Forms.Padding(0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(780, 417);
             this.listView1.TabIndex = 1;
@@ -102,7 +102,7 @@
             this.clm_SigAtrib.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.clm_SigAtrib.Width = 145;
             // 
-            // ArchivoComp
+            // SoloAtributos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +110,7 @@
             this.ClientSize = new System.Drawing.Size(800, 437);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ArchivoComp";
+            this.Name = "SoloAtributos";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = " ";
