@@ -22,16 +22,35 @@ namespace Proyecto1
         public SoloAtributos(string Nombre, int n)
         {
             InitializeComponent();
+            float tam = (float)(dataGridView1.ClientSize.Width - 41) / (float)(dataGridView1.Columns.Count);
+            for (int i = dataGridView1.Columns.Count - 1; i > -1; i--)
+                dataGridView1.Columns[i].Width = (int)tam;
         }
         public SoloAtributos()
         {
             InitializeComponent();
-            
+            float tam = (float)(dataGridView1.ClientSize.Width - 41) / (float)(dataGridView1.Columns.Count);
+            for (int i = dataGridView1.Columns.Count - 1; i > -1; i--)
+                dataGridView1.Columns[i].Width = (int)tam;
         }
         
         private void Editor_Load(object sender, EventArgs e)
         {
-            listView1.Size = new Size(new Point(ClientSize.Width - 22, ClientSize.Height - 22));
+            
+        }
+
+        private void SoloAtributos_SizeChanged(object sender, EventArgs e)
+        {
+            
+            float tam = (float)(dataGridView1.ClientSize.Width - 41) / (float)(dataGridView1.Columns.Count);
+            for (int i = dataGridView1.Columns.Count-1;  i > -1; i--)
+                dataGridView1.Columns[i].Width = (int)tam;
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

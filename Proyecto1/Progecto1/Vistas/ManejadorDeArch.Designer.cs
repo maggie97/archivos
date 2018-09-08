@@ -38,13 +38,13 @@
             this.guardarcomoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btn_Entidades = new System.Windows.Forms.Button();
+            this.btn_Atributos = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_ArchivoComp = new System.Windows.Forms.Button();
             this.btn_nvaEntidad = new System.Windows.Forms.Button();
             this.btn_nvoAtributo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Atributos = new System.Windows.Forms.Button();
-            this.btn_Entidades = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Teal;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -129,7 +129,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AllowDrop = true;
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Teal;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.splitContainer1.Panel1.Controls.Add(this.btn_Entidades);
             this.splitContainer1.Panel1.Controls.Add(this.btn_Atributos);
             this.splitContainer1.Panel1.Controls.Add(this.btn_nuevo);
@@ -139,9 +139,37 @@
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.ForeColor = System.Drawing.Color.Black;
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(2);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Size = new System.Drawing.Size(961, 469);
             this.splitContainer1.SplitterDistance = 182;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // btn_Entidades
+            // 
+            this.btn_Entidades.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_Entidades.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Entidades.Location = new System.Drawing.Point(5, 296);
+            this.btn_Entidades.Name = "btn_Entidades";
+            this.btn_Entidades.Size = new System.Drawing.Size(172, 50);
+            this.btn_Entidades.TabIndex = 10;
+            this.btn_Entidades.Text = "Entidades";
+            this.btn_Entidades.UseVisualStyleBackColor = false;
+            this.btn_Entidades.Click += new System.EventHandler(this.btn_Entidades_Click);
+            // 
+            // btn_Atributos
+            // 
+            this.btn_Atributos.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_Atributos.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Atributos.Location = new System.Drawing.Point(5, 240);
+            this.btn_Atributos.Name = "btn_Atributos";
+            this.btn_Atributos.Size = new System.Drawing.Size(172, 50);
+            this.btn_Atributos.TabIndex = 9;
+            this.btn_Atributos.Text = "Atributos";
+            this.btn_Atributos.UseVisualStyleBackColor = false;
+            this.btn_Atributos.Click += new System.EventHandler(this.btn_Atributos_Click);
             // 
             // btn_nuevo
             // 
@@ -188,6 +216,7 @@
             this.btn_nvoAtributo.TabIndex = 5;
             this.btn_nvoAtributo.Text = "Nuevo Atributo";
             this.btn_nvoAtributo.UseVisualStyleBackColor = false;
+            this.btn_nvoAtributo.Click += new System.EventHandler(this.btn_nvoAtributo_Click);
             // 
             // label1
             // 
@@ -197,35 +226,11 @@
             this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 0;
             // 
-            // btn_Atributos
-            // 
-            this.btn_Atributos.BackColor = System.Drawing.Color.LightBlue;
-            this.btn_Atributos.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Atributos.Location = new System.Drawing.Point(5, 240);
-            this.btn_Atributos.Name = "btn_Atributos";
-            this.btn_Atributos.Size = new System.Drawing.Size(172, 50);
-            this.btn_Atributos.TabIndex = 9;
-            this.btn_Atributos.Text = "Atributos";
-            this.btn_Atributos.UseVisualStyleBackColor = false;
-            this.btn_Atributos.Click += new System.EventHandler(this.btn_Atributos_Click);
-            // 
-            // btn_Entidades
-            // 
-            this.btn_Entidades.BackColor = System.Drawing.Color.LightBlue;
-            this.btn_Entidades.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Entidades.Location = new System.Drawing.Point(5, 296);
-            this.btn_Entidades.Name = "btn_Entidades";
-            this.btn_Entidades.Size = new System.Drawing.Size(172, 50);
-            this.btn_Entidades.TabIndex = 10;
-            this.btn_Entidades.Text = "Entidades";
-            this.btn_Entidades.UseVisualStyleBackColor = false;
-            this.btn_Entidades.Click += new System.EventHandler(this.btn_Entidades_Click);
-            // 
             // ManejadorArch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.SystemColors.GrayText;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(961, 493);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);

@@ -20,6 +20,21 @@ namespace Proyecto1
         {
             InitializeComponent();
             elementos = new List<Object>();
+            vistaComp = new ArchivoCompleto();
+            atrb = new SoloAtributos();
+            ent = new SoloEntidades();
+
+            vistaComp.TopLevel = false;
+            atrb.TopLevel = false;
+            ent.TopLevel = false;
+
+            while (splitContainer1.Panel2.Controls.Count > 0)
+            {
+                splitContainer1.Panel2.Controls.RemoveAt(0);
+            }
+            splitContainer1.Panel2.Controls.Add(vistaComp);
+            splitContainer1.Panel2.Controls.Add(atrb);
+            splitContainer1.Panel2.Controls.Add(ent);
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,6 +88,11 @@ namespace Proyecto1
             atrb.Visible = false;
             ent.Visible = true;
             ent.Dock = DockStyle.Fill;
+        }
+
+        private void btn_nvoAtributo_Click(object sender, EventArgs e)
+        {
+            Console.Write("Atributo");
         }
     }
 }

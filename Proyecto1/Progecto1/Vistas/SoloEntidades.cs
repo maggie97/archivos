@@ -31,7 +31,7 @@ namespace Proyecto1
         
         private void Editor_Load(object sender, EventArgs e)
         {
-            listView1.Size = new Size(new Point(ClientSize.Width - 22, ClientSize.Height - 22));
+           // listView1.Size = new Size(new Point(ClientSize.Width - 22, ClientSize.Height - 22));
         }
     }
 }

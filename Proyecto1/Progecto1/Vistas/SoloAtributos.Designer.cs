@@ -28,105 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.clm_Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clm_Dir = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clm_Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clm_Longitud = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clm_TipoIndice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clm_DirIndice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clm_SigAtrib = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clm_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clm_DirAtr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clm_TipoD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clm_Long = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clm_Indice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clm_DirIndice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clm_SigAtr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listView1
+            // dataGridView1
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Window;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clm_Nombre,
-            this.clm_Dir,
-            this.clm_Tipo,
-            this.clm_Longitud,
-            this.clm_TipoIndice,
+            this.clm_DirAtr,
+            this.clm_TipoD,
+            this.clm_Long,
+            this.clm_Indice,
             this.clm_DirIndice,
-            this.clm_SigAtrib});
-            this.listView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(10, 10);
-            this.listView1.Margin = new System.Windows.Forms.Padding(0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(780, 417);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.clm_SigAtr});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(783, 407);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // clm_Nombre
             // 
-            this.clm_Nombre.Text = "Nombre";
-            this.clm_Nombre.Width = 105;
+            this.clm_Nombre.HeaderText = "Nombre";
+            this.clm_Nombre.Name = "clm_Nombre";
             // 
-            // clm_Dir
+            // clm_DirAtr
             // 
-            this.clm_Dir.Text = "Direccion";
-            this.clm_Dir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clm_Dir.Width = 105;
+            this.clm_DirAtr.HeaderText = "Dirección Atributo";
+            this.clm_DirAtr.Name = "clm_DirAtr";
             // 
-            // clm_Tipo
+            // clm_TipoD
             // 
-            this.clm_Tipo.Text = "Tipo";
-            this.clm_Tipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clm_Tipo.Width = 105;
+            this.clm_TipoD.HeaderText = "Tipo De Dato";
+            this.clm_TipoD.Name = "clm_TipoD";
             // 
-            // clm_Longitud
+            // clm_Long
             // 
-            this.clm_Longitud.Text = "Longitud";
-            this.clm_Longitud.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clm_Longitud.Width = 105;
+            this.clm_Long.HeaderText = "Longitud";
+            this.clm_Long.Name = "clm_Long";
             // 
-            // clm_TipoIndice
+            // clm_Indice
             // 
-            this.clm_TipoIndice.Text = "TipoIndice";
-            this.clm_TipoIndice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clm_TipoIndice.Width = 105;
+            this.clm_Indice.HeaderText = "Tipo de Indice";
+            this.clm_Indice.Name = "clm_Indice";
             // 
             // clm_DirIndice
             // 
-            this.clm_DirIndice.Text = "Direcc Indice";
-            this.clm_DirIndice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clm_DirIndice.Width = 112;
+            this.clm_DirIndice.HeaderText = "Direccion del Indice";
+            this.clm_DirIndice.Name = "clm_DirIndice";
+            this.clm_DirIndice.Width = 120;
             // 
-            // clm_SigAtrib
+            // clm_SigAtr
             // 
-            this.clm_SigAtrib.Text = "Direccion Sig Atributo";
-            this.clm_SigAtrib.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clm_SigAtrib.Width = 145;
+            this.clm_SigAtr.HeaderText = "Direccion del Siguiente Atributo";
+            this.clm_SigAtr.Name = "clm_SigAtr";
+            this.clm_SigAtr.Width = 120;
             // 
             // SoloAtributos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 437);
-            this.Controls.Add(this.listView1);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(811, 433);
+            this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SoloAtributos";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Editor_Load);
+            this.SizeChanged += new System.EventHandler(this.SoloAtributos_SizeChanged);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ColumnHeader clm_Nombre;
-        private System.Windows.Forms.ColumnHeader clm_Dir;
-        private System.Windows.Forms.ColumnHeader clm_Tipo;
-        private System.Windows.Forms.ColumnHeader clm_Longitud;
-        private System.Windows.Forms.ColumnHeader clm_TipoIndice;
-        private System.Windows.Forms.ColumnHeader clm_DirIndice;
-        private System.Windows.Forms.ColumnHeader clm_SigAtrib;
-        private System.Windows.Forms.ListView listView1;
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_DirAtr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_TipoD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_Long;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_Indice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_DirIndice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clm_SigAtr;
     }
 }
