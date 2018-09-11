@@ -34,15 +34,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Nombre = new System.Windows.Forms.TextBox();
-            this.txt_Tipo = new System.Windows.Forms.TextBox();
             this.txt_Long = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbo_Entidad = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Location = new System.Drawing.Point(79, 191);
+            this.btn_Cancelar.Location = new System.Drawing.Point(89, 191);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(75, 23);
             this.btn_Cancelar.TabIndex = 0;
@@ -95,13 +95,6 @@
             this.txt_Nombre.Size = new System.Drawing.Size(257, 20);
             this.txt_Nombre.TabIndex = 6;
             // 
-            // txt_Tipo
-            // 
-            this.txt_Tipo.Location = new System.Drawing.Point(158, 71);
-            this.txt_Tipo.Name = "txt_Tipo";
-            this.txt_Tipo.Size = new System.Drawing.Size(257, 20);
-            this.txt_Tipo.TabIndex = 7;
-            // 
             // txt_Long
             // 
             this.txt_Long.Location = new System.Drawing.Point(158, 101);
@@ -127,15 +120,27 @@
             this.cbo_Entidad.Size = new System.Drawing.Size(257, 21);
             this.cbo_Entidad.TabIndex = 10;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Char",
+            "Int",
+            "Float"});
+            this.comboBox1.Location = new System.Drawing.Point(158, 71);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(257, 21);
+            this.comboBox1.TabIndex = 11;
+            // 
             // NuevoAtributo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 230);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cbo_Entidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_Long);
-            this.Controls.Add(this.txt_Tipo);
             this.Controls.Add(this.txt_Nombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,9 +162,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_Nombre;
-        private System.Windows.Forms.TextBox txt_Tipo;
         private System.Windows.Forms.TextBox txt_Long;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbo_Entidad;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

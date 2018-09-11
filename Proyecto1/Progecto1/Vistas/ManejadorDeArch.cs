@@ -14,7 +14,7 @@ namespace Proyecto1
     {
         ArchivoCompleto vistaComp;
         SoloAtributos atrb;
-        SoloEntidades ent;
+        ArchivoEntidades vEnt;
         List<Object> elementos;
         public ManejadorArch()
         {
@@ -22,19 +22,19 @@ namespace Proyecto1
             elementos = new List<Object>();
             vistaComp = new ArchivoCompleto();
             atrb = new SoloAtributos();
-            ent = new SoloEntidades();
+            vEnt = new ArchivoEntidades("holi.txt", 1);
 
             vistaComp.TopLevel = false;
             atrb.TopLevel = false;
-            ent.TopLevel = false;
+            vEnt.TopLevel = false;
 
-            while (splitContainer1.Panel2.Controls.Count > 0)
+            while (contPrincipal.Controls.Count > 0)
             {
-                splitContainer1.Panel2.Controls.RemoveAt(0);
+                contPrincipal.Controls.RemoveAt(0);
             }
-            splitContainer1.Panel2.Controls.Add(vistaComp);
-            splitContainer1.Panel2.Controls.Add(atrb);
-            splitContainer1.Panel2.Controls.Add(ent);
+            contPrincipal.Controls.Add(vistaComp);
+            contPrincipal.Controls.Add(atrb);
+            contPrincipal.Controls.Add(vEnt);
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,11 +51,11 @@ namespace Proyecto1
             elementos = new List<object>();
             vistaComp = new ArchivoCompleto();
             atrb = new SoloAtributos();
-            ent = new SoloEntidades();
+            vEnt = new ArchivoEntidades("holi", 1);//Por ahora 
 
             vistaComp.TopLevel = false;
             atrb.TopLevel = false;
-            ent.TopLevel = false;
+            vEnt.TopLevel = false;
 
             while (splitContainer1.Panel2.Controls.Count > 0)
             {
@@ -63,14 +63,14 @@ namespace Proyecto1
             }
             splitContainer1.Panel2.Controls.Add(vistaComp);
             splitContainer1.Panel2.Controls.Add(atrb);
-            splitContainer1.Panel2.Controls.Add(ent);
+            splitContainer1.Panel2.Controls.Add(vEnt);
         }
 
         private void btn_ArchivoComp_Click(object sender, EventArgs e)
         {
             vistaComp.Visible = true;
             atrb.Visible = false;
-            ent.Visible = false;
+            vEnt.Visible = false;
             vistaComp.Dock = DockStyle.Fill;
         }
 
@@ -78,7 +78,7 @@ namespace Proyecto1
         {
             vistaComp.Visible = false;
             atrb.Visible = true;
-            ent.Visible = false;
+            vEnt.Visible = false;
             atrb.Dock = DockStyle.Fill;
         }
 
@@ -86,13 +86,29 @@ namespace Proyecto1
         {
             vistaComp.Visible = false;
             atrb.Visible = false;
-            ent.Visible = true;
-            ent.Dock = DockStyle.Fill;
+            vEnt.Visible = true;
+            vEnt.Dock = DockStyle.Fill;
         }
 
         private void btn_nvoAtributo_Click(object sender, EventArgs e)
         {
             Console.Write("Atributo");
+        }
+
+        private void btn_nvaEntidad_Click(object sender, EventArgs e)
+        {
+            NuevaEntidad nueva_ent = new NuevaEntidad();
+            if(nueva_ent.ShowDialog() == DialogResult.OK)
+            {
+
+                vEnt.nuevaEnt(nueva_ent.Nombre_Entidad);
+            }
+            
+        }
+
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
         }
     }
 }

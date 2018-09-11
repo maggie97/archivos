@@ -47,23 +47,29 @@
   <ItemGroup>
     <Compile Include="Controladores\Atributo.cs" />
     <Compile Include="Controladores\DiccDeDatos.cs" />
-    <Compile Include="NuevoAtributo.cs">
+    <Compile Include="Vistas\NuevaEntidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NuevoAtributo.Designer.cs">
+    <Compile Include="Vistas\NuevaEntidad.Designer.cs">
+      <DependentUpon>NuevaEntidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\NuevoAtributo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\NuevoAtributo.Designer.cs">
       <DependentUpon>NuevoAtributo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\SoloEntidades.cs">
+    <Compile Include="Vistas\ArchivoEntidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\SoloEntidades.Designer.cs">
-      <DependentUpon>SoloEntidades.cs</DependentUpon>
+    <Compile Include="Vistas\ArchivoEntidades.Designer.cs">
+      <DependentUpon>ArchivoEntidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\SoloAtributos.cs">
+    <Compile Include="Vistas\ArchivoAtributos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\SoloAtributos.Designer.cs">
-      <DependentUpon>SoloAtributos.cs</DependentUpon>
+    <Compile Include="Vistas\ArchivoAtributos.Designer.cs">
+      <DependentUpon>ArchivoAtributos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\ArchivoComp.cs">
       <SubType>Form</SubType>
@@ -80,14 +86,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NuevoAtributo.resx">
+    <EmbeddedResource Include="Vistas\NuevaEntidad.resx">
+      <DependentUpon>NuevaEntidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\NuevoAtributo.resx">
       <DependentUpon>NuevoAtributo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\SoloEntidades.resx">
-      <DependentUpon>SoloEntidades.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\ArchivoEntidades.resx">
+      <DependentUpon>ArchivoEntidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\SoloAtributos.resx">
-      <DependentUpon>SoloAtributos.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\ArchivoAtributos.resx">
+      <DependentUpon>ArchivoAtributos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ArchivoComp.resx">
       <DependentUpon>ArchivoComp.cs</DependentUpon>
