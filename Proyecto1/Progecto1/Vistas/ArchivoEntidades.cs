@@ -14,14 +14,16 @@ namespace Proyecto1
     { //Solo deberia de leer el archivo (teoricamente)
 
         List<Entidad> list_entidades;
+        FileStream f;
         /// <summary>
         /// El constructor de Editor sirve para crear la 
         /// pestaña en donde se realizaran las acciones a capturar 
         /// </summary>
-        public ArchivoEntidades()
+        public ArchivoEntidades(FileStream file)
         {
             InitializeComponent();
             list_entidades = new List<Entidad>();
+            f = file;
         }
         private void Editor_Load(object sender, EventArgs e)
         {
@@ -31,8 +33,11 @@ namespace Proyecto1
         {
             try
             {
-                Entidad entidad = new Entidad(nomb.ToCharArray(), finArch, -1, -1);
-                Console.WriteLine(nomb);
+                long sig_ent = -1;
+                if (list_entidades.Count != 0)
+                    list_entidades.Last().Dir_sig = finArch;
+                Entidad entidad = new Entidad(nomb.ToCharArray(), finArch, -1, sig_ent);
+                Console.WriteLine(nomb, entidad.Dir_Entidad, entidad.Dir_sig);
                 list_entidades.Add(entidad);
                 dGVentidad.Rows.Add(nomb, entidad.Dir_Entidad, entidad.Dir_Atributos, entidad.Dir_Atributos, entidad.Dir_sig);
                 saveLast(bw, entidad);

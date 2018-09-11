@@ -9,6 +9,7 @@ namespace Proyecto1
     public class Entidad
     {
         char[] nombreEntidad = new char[30];
+        string sNombre;
         long dir_Entidad = -1;
         long dir_Atributos = -1;
         long dir_Datos = -1;
