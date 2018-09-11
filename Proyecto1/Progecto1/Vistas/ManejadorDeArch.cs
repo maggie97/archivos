@@ -15,6 +15,13 @@ namespace Proyecto1
         ArchivoCompleto vistaComp;
         SoloAtributos atrb;
         ArchivoEntidades vEnt;
+
+        FileStream file = null;
+        BinaryWriter swriter;
+        BinaryReader breader;
+        string Nombre;
+        long Cabecera;
+
         List<Object> elementos;
         public ManejadorArch()
         {
@@ -22,19 +29,26 @@ namespace Proyecto1
             elementos = new List<Object>();
             vistaComp = new ArchivoCompleto();
             atrb = new SoloAtributos();
-            vEnt = new ArchivoEntidades("holi.txt", 1);
+            vEnt = new ArchivoEntidades();
 
             vistaComp.TopLevel = false;
             atrb.TopLevel = false;
             vEnt.TopLevel = false;
 
-            while (contPrincipal.Controls.Count > 0)
+            while (panelForms.Controls.Count > 0)
             {
-                contPrincipal.Controls.RemoveAt(0);
+                panelForms.Controls.RemoveAt(0);
             }
-            contPrincipal.Controls.Add(vistaComp);
-            contPrincipal.Controls.Add(atrb);
-            contPrincipal.Controls.Add(vEnt);
+            panelForms.Controls.Add(vistaComp);
+            panelForms.Controls.Add(atrb);
+            panelForms.Controls.Add(vEnt);
+
+            Cabecera = -1;
+            file = new FileStream("Ent.dd", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            swriter = new BinaryWriter(file);
+            //breader = new BinaryReader(file);
+            swriter.Write(Cabecera);
+            //file.Close();
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,26 +58,39 @@ namespace Proyecto1
 
         private void ManejadorArch_Load(object sender, EventArgs e)
         {
-
+            //txtLong.Text = file.Length.ToString();
         }
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
+            file.Close();
+            swriter.Close();
+            
             elementos = new List<object>();
             vistaComp = new ArchivoCompleto();
             atrb = new SoloAtributos();
-            vEnt = new ArchivoEntidades("holi", 1);//Por ahora 
+            vEnt = new ArchivoEntidades();
 
             vistaComp.TopLevel = false;
             atrb.TopLevel = false;
             vEnt.TopLevel = false;
 
-            while (splitContainer1.Panel2.Controls.Count > 0)
+            while (panelForms.Controls.Count > 0)
             {
-                splitContainer1.Panel2.Controls.RemoveAt(0);
+                panelForms.Controls.RemoveAt(0);
             }
-            splitContainer1.Panel2.Controls.Add(vistaComp);
-            splitContainer1.Panel2.Controls.Add(atrb);
-            splitContainer1.Panel2.Controls.Add(vEnt);
+            panelForms.Controls.Add(vistaComp);
+            panelForms.Controls.Add(atrb);
+            panelForms.Controls.Add(vEnt);
+
+            Cabecera = -1;
+            file = new FileStream("Ent.dd", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            swriter = new BinaryWriter(file);
+            breader = new BinaryReader(file);
+            swriter.Write(Cabecera);
+            //file.Close();
+
+            Actualiza();
+
         }
 
         private void btn_ArchivoComp_Click(object sender, EventArgs e)
@@ -100,15 +127,23 @@ namespace Proyecto1
             NuevaEntidad nueva_ent = new NuevaEntidad();
             if(nueva_ent.ShowDialog() == DialogResult.OK)
             {
-
-                vEnt.nuevaEnt(nueva_ent.Nombre_Entidad);
+                vEnt.nuevaEnt(nueva_ent.Nombre_Entidad.ToString(), swriter, file.Length);
+                Actualiza();
             }
-            
         }
-
+        private void Actualiza()
+        {
+            txtLong.Text = file.Length.ToString();
+        }
         private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
         {
 
+        }
+
+        private void ManejadorArch_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            swriter.Close();
+            //breader.Close();
         }
     }
 }
