@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAtributos = new System.Windows.Forms.DataGridView();
             this.clm_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clm_DirAtr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clm_TipoD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,13 +36,13 @@
             this.clm_Indice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clm_DirIndice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clm_SigAtr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAtributos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvAtributos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAtributos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAtributos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clm_Nombre,
             this.clm_DirAtr,
             this.clm_TipoD,
@@ -50,13 +50,13 @@
             this.clm_Indice,
             this.clm_DirIndice,
             this.clm_SigAtr});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(783, 407);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvAtributos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAtributos.EnableHeadersVisualStyles = false;
+            this.dgvAtributos.Location = new System.Drawing.Point(14, 13);
+            this.dgvAtributos.Name = "dgvAtributos";
+            this.dgvAtributos.Size = new System.Drawing.Size(783, 407);
+            this.dgvAtributos.TabIndex = 0;
+            this.dgvAtributos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // clm_Nombre
             // 
@@ -101,7 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(811, 433);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAtributos);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SoloAtributos";
@@ -110,14 +110,14 @@
             this.Text = " ";
             this.Load += new System.EventHandler(this.Editor_Load);
             this.SizeChanged += new System.EventHandler(this.SoloAtributos_SizeChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAtributos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAtributos;
         private System.Windows.Forms.DataGridViewTextBoxColumn clm_Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn clm_DirAtr;
         private System.Windows.Forms.DataGridViewTextBoxColumn clm_TipoD;

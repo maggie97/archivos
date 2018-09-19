@@ -16,6 +16,7 @@ namespace Proyecto1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new nuevoArchivo());
             Application.Run(new ManejadorArch());
         }
     }

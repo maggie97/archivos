@@ -51,6 +51,7 @@
             this.dGVentidad.Name = "dGVentidad";
             this.dGVentidad.Size = new System.Drawing.Size(780, 417);
             this.dGVentidad.TabIndex = 0;
+            this.dGVentidad.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVentidad_CellContentDoubleClick);
             // 
             // Nomb_Entidad
             // 

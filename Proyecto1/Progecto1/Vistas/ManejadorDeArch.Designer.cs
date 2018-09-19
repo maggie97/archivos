@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Abrir = new System.Windows.Forms.Button();
+            this.btn_ElimAtrib = new System.Windows.Forms.Button();
+            this.btn_EliminaEnt = new System.Windows.Forms.Button();
             this.btn_Entidades = new System.Windows.Forms.Button();
             this.btn_Atributos = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
@@ -39,9 +42,13 @@
             this.panelInfo = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cabeceraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.txt_Cabecera = new System.Windows.Forms.ToolStripTextBox();
             this.longArchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtLong = new System.Windows.Forms.ToolStripTextBox();
+            this.vistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alfabeticamenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Cerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.contPrincipal.SuspendLayout();
             this.panelInfo.SuspendLayout();
@@ -51,6 +58,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btn_Cerrar);
+            this.panel1.Controls.Add(this.btn_Abrir);
+            this.panel1.Controls.Add(this.btn_ElimAtrib);
+            this.panel1.Controls.Add(this.btn_EliminaEnt);
             this.panel1.Controls.Add(this.btn_Entidades);
             this.panel1.Controls.Add(this.btn_Atributos);
             this.panel1.Controls.Add(this.btn_nuevo);
@@ -62,11 +73,46 @@
             this.panel1.Size = new System.Drawing.Size(200, 493);
             this.panel1.TabIndex = 4;
             // 
+            // btn_Abrir
+            // 
+            this.btn_Abrir.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Abrir.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Abrir.Location = new System.Drawing.Point(12, 14);
+            this.btn_Abrir.Name = "btn_Abrir";
+            this.btn_Abrir.Size = new System.Drawing.Size(172, 50);
+            this.btn_Abrir.TabIndex = 21;
+            this.btn_Abrir.Text = "Abrir Archivo";
+            this.btn_Abrir.UseVisualStyleBackColor = false;
+            this.btn_Abrir.Click += new System.EventHandler(this.btn_Abrir_Click);
+            // 
+            // btn_ElimAtrib
+            // 
+            this.btn_ElimAtrib.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_ElimAtrib.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ElimAtrib.Location = new System.Drawing.Point(40, 362);
+            this.btn_ElimAtrib.Name = "btn_ElimAtrib";
+            this.btn_ElimAtrib.Size = new System.Drawing.Size(144, 36);
+            this.btn_ElimAtrib.TabIndex = 20;
+            this.btn_ElimAtrib.Text = "Elimina Atributo";
+            this.btn_ElimAtrib.UseVisualStyleBackColor = false;
+            // 
+            // btn_EliminaEnt
+            // 
+            this.btn_EliminaEnt.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_EliminaEnt.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_EliminaEnt.Location = new System.Drawing.Point(40, 217);
+            this.btn_EliminaEnt.Name = "btn_EliminaEnt";
+            this.btn_EliminaEnt.Size = new System.Drawing.Size(144, 36);
+            this.btn_EliminaEnt.TabIndex = 18;
+            this.btn_EliminaEnt.Text = "Elimina Entidad";
+            this.btn_EliminaEnt.UseVisualStyleBackColor = false;
+            this.btn_EliminaEnt.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btn_Entidades
             // 
-            this.btn_Entidades.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_Entidades.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Entidades.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Entidades.Location = new System.Drawing.Point(12, 65);
+            this.btn_Entidades.Location = new System.Drawing.Point(12, 123);
             this.btn_Entidades.Name = "btn_Entidades";
             this.btn_Entidades.Size = new System.Drawing.Size(172, 50);
             this.btn_Entidades.TabIndex = 15;
@@ -76,11 +122,11 @@
             // 
             // btn_Atributos
             // 
-            this.btn_Atributos.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_Atributos.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Atributos.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Atributos.Location = new System.Drawing.Point(12, 171);
+            this.btn_Atributos.Location = new System.Drawing.Point(12, 259);
             this.btn_Atributos.Name = "btn_Atributos";
-            this.btn_Atributos.Size = new System.Drawing.Size(172, 50);
+            this.btn_Atributos.Size = new System.Drawing.Size(172, 54);
             this.btn_Atributos.TabIndex = 14;
             this.btn_Atributos.Text = "Atributos";
             this.btn_Atributos.UseVisualStyleBackColor = false;
@@ -88,9 +134,9 @@
             // 
             // btn_nuevo
             // 
-            this.btn_nuevo.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_nuevo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_nuevo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nuevo.Location = new System.Drawing.Point(12, 12);
+            this.btn_nuevo.Location = new System.Drawing.Point(12, 70);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(172, 50);
             this.btn_nuevo.TabIndex = 13;
@@ -100,11 +146,11 @@
             // 
             // btn_nvaEntidad
             // 
-            this.btn_nvaEntidad.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_nvaEntidad.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_nvaEntidad.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nvaEntidad.Location = new System.Drawing.Point(12, 117);
+            this.btn_nvaEntidad.Location = new System.Drawing.Point(40, 175);
             this.btn_nvaEntidad.Name = "btn_nvaEntidad";
-            this.btn_nvaEntidad.Size = new System.Drawing.Size(172, 50);
+            this.btn_nvaEntidad.Size = new System.Drawing.Size(144, 36);
             this.btn_nvaEntidad.TabIndex = 12;
             this.btn_nvaEntidad.Text = "Nueva Entidad";
             this.btn_nvaEntidad.UseVisualStyleBackColor = false;
@@ -112,11 +158,11 @@
             // 
             // btn_nvoAtributo
             // 
-            this.btn_nvoAtributo.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_nvoAtributo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_nvoAtributo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nvoAtributo.Location = new System.Drawing.Point(12, 224);
+            this.btn_nvoAtributo.Location = new System.Drawing.Point(40, 319);
             this.btn_nvoAtributo.Name = "btn_nvoAtributo";
-            this.btn_nvoAtributo.Size = new System.Drawing.Size(172, 50);
+            this.btn_nvoAtributo.Size = new System.Drawing.Size(144, 34);
             this.btn_nvoAtributo.TabIndex = 11;
             this.btn_nvoAtributo.Text = "Nuevo Atributo";
             this.btn_nvoAtributo.UseVisualStyleBackColor = false;
@@ -135,9 +181,9 @@
             // panelForms
             // 
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForms.Location = new System.Drawing.Point(0, 42);
+            this.panelForms.Location = new System.Drawing.Point(0, 30);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(761, 451);
+            this.panelForms.Size = new System.Drawing.Size(761, 463);
             this.panelForms.TabIndex = 1;
             // 
             // panelInfo
@@ -146,17 +192,19 @@
             this.panelInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInfo.Location = new System.Drawing.Point(0, 0);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(761, 42);
+            this.panelInfo.Size = new System.Drawing.Size(761, 30);
             this.panelInfo.TabIndex = 0;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cabeceraToolStripMenuItem,
-            this.toolStripTextBox1,
+            this.txt_Cabecera,
             this.longArchToolStripMenuItem,
-            this.txtLong});
+            this.txtLong,
+            this.vistaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Margin = new System.Windows.Forms.Padding(1);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(761, 27);
             this.menuStrip1.TabIndex = 2;
@@ -168,11 +216,11 @@
             this.cabeceraToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
             this.cabeceraToolStripMenuItem.Text = "Cabecera";
             // 
-            // toolStripTextBox1
+            // txt_Cabecera
             // 
-            this.toolStripTextBox1.Enabled = false;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.txt_Cabecera.Enabled = false;
+            this.txt_Cabecera.Name = "txt_Cabecera";
+            this.txt_Cabecera.Size = new System.Drawing.Size(100, 23);
             // 
             // longArchToolStripMenuItem
             // 
@@ -186,6 +234,41 @@
             this.txtLong.Enabled = false;
             this.txtLong.Name = "txtLong";
             this.txtLong.Size = new System.Drawing.Size(100, 23);
+            // 
+            // vistaToolStripMenuItem
+            // 
+            this.vistaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alfabeticamenteToolStripMenuItem,
+            this.archivoToolStripMenuItem});
+            this.vistaToolStripMenuItem.Name = "vistaToolStripMenuItem";
+            this.vistaToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
+            this.vistaToolStripMenuItem.Text = "Vista";
+            // 
+            // alfabeticamenteToolStripMenuItem
+            // 
+            this.alfabeticamenteToolStripMenuItem.Name = "alfabeticamenteToolStripMenuItem";
+            this.alfabeticamenteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.alfabeticamenteToolStripMenuItem.Text = "Alfabeticamente";
+            this.alfabeticamenteToolStripMenuItem.Click += new System.EventHandler(this.btn_Act_Click);
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            this.archivoToolStripMenuItem.Click += new System.EventHandler(this.btn_ActArch_Click);
+            // 
+            // btn_Cerrar
+            // 
+            this.btn_Cerrar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Cerrar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cerrar.Location = new System.Drawing.Point(12, 404);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Size = new System.Drawing.Size(172, 54);
+            this.btn_Cerrar.TabIndex = 22;
+            this.btn_Cerrar.Text = "Cerrar";
+            this.btn_Cerrar.UseVisualStyleBackColor = false;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
             // 
             // ManejadorArch
             // 
@@ -227,9 +310,16 @@
         private System.Windows.Forms.Panel panelInfo;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cabeceraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripTextBox txt_Cabecera;
         private System.Windows.Forms.ToolStripMenuItem longArchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox txtLong;
+        private  System.Windows.Forms.ToolStripTextBox txtLong;
+        private System.Windows.Forms.Button btn_ElimAtrib;
+        private System.Windows.Forms.Button btn_EliminaEnt;
+        private System.Windows.Forms.ToolStripMenuItem vistaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alfabeticamenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.Button btn_Abrir;
+        private System.Windows.Forms.Button btn_Cerrar;
     }
 }
 

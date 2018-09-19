@@ -1,4 +1,4 @@
-﻿namespace Progecto1
+﻿namespace Proyecto1
 {
     partial class NuevoAtributo
     {
@@ -36,12 +36,13 @@
             this.txt_Nombre = new System.Windows.Forms.TextBox();
             this.txt_Long = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbo_Entidad = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_Entidad = new System.Windows.Forms.ComboBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancelar.Location = new System.Drawing.Point(89, 191);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(75, 23);
@@ -51,6 +52,7 @@
             // 
             // btn_Aceptar
             // 
+            this.btn_Aceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_Aceptar.Location = new System.Drawing.Point(293, 191);
             this.btn_Aceptar.Name = "btn_Aceptar";
             this.btn_Aceptar.Size = new System.Drawing.Size(75, 23);
@@ -112,33 +114,35 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Entidad";
             // 
-            // cbo_Entidad
+            // cmb_Entidad
             // 
-            this.cbo_Entidad.FormattingEnabled = true;
-            this.cbo_Entidad.Location = new System.Drawing.Point(158, 140);
-            this.cbo_Entidad.Name = "cbo_Entidad";
-            this.cbo_Entidad.Size = new System.Drawing.Size(257, 21);
-            this.cbo_Entidad.TabIndex = 10;
+            this.cmb_Entidad.FormattingEnabled = true;
+            this.cmb_Entidad.Location = new System.Drawing.Point(158, 140);
+            this.cmb_Entidad.Name = "cmb_Entidad";
+            this.cmb_Entidad.Size = new System.Drawing.Size(257, 21);
+            this.cmb_Entidad.TabIndex = 10;
             // 
-            // comboBox1
+            // cmbTipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
             "Char",
             "Int",
             "Float"});
-            this.comboBox1.Location = new System.Drawing.Point(158, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 21);
-            this.comboBox1.TabIndex = 11;
+            this.cmbTipo.Location = new System.Drawing.Point(158, 71);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(257, 21);
+            this.cmbTipo.TabIndex = 11;
             // 
             // NuevoAtributo
             // 
+            this.AcceptButton = this.btn_Aceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_Cancelar;
             this.ClientSize = new System.Drawing.Size(463, 230);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cbo_Entidad);
+            this.Controls.Add(this.cmbTipo);
+            this.Controls.Add(this.cmb_Entidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_Long);
             this.Controls.Add(this.txt_Nombre);
@@ -164,7 +168,7 @@
         private System.Windows.Forms.TextBox txt_Nombre;
         private System.Windows.Forms.TextBox txt_Long;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbo_Entidad;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_Entidad;
+        private System.Windows.Forms.ComboBox cmbTipo;
     }
 }
